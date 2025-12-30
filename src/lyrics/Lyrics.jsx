@@ -12,9 +12,25 @@ useEffect(() => {
     const audio = audioRef.current;
     if (!audio || !readyToPlay) return;
 
-    audio.play().catch(() => {
-      console.log("se bloqueo");
-    });
+    // Log para saber si intentó reproducir y qué URL tiene
+    console.log("Intentando reproducir:", audio.src);
+
+    audio.play()
+      .then(() => {
+        console.log("Reproducción exitosa ✅");
+      })
+      .catch((error) => {
+        // ESTE ES EL LOG DETALLADO
+        console.error("Error al reproducir audio:");
+        console.error("Nombre del error:", error.name);
+        console.error("Mensaje:", error.message);
+
+        if (error.name === "NotAllowedError") {
+          console.warn("⚠️ BLOQUEO DE AUTOPLAY: El usuario debe hacer clic en la página antes de que el audio pueda sonar.");
+        } else if (error.name === "NotSupportedError") {
+          console.warn("⚠️ FORMATO NO SOPORTADO: El navegador no puede reproducir este tipo de archivo.");
+        }
+      });
 
     const updateTime = () => setCurrentTime(audio.currentTime);
     audio.addEventListener("timeupdate", updateTime);
