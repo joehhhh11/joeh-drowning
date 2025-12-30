@@ -1,0 +1,40 @@
+export const songs = [
+  {
+    id: 1,
+    title: "Drowning",
+    artist: "A Boogie wit da Hoodie",
+    url: "/audio/audio.mp3",
+    lyrics: [
+      { time: 0.10, text: "SHE" },
+      { time: 0.40, text: "LOOKED" },
+      { time: 0.65, text: "AT MY" },
+      { time: 1.05, text: "WRIST" },
+      { time: 1.40, text: "AND" },
+      { time: 1.60, text: "SHE" },
+      { time: 1.85, text: "LOOKED" },
+      { time: 2.15, text: "AT A" },
+      { time: 2.60, text: "$100K" },
+      // --- A partir de aquí sumamos +0.50s a todo ---
+      { time: 3.90, text: "WRIST" }, 
+      { time: 4.20, text: "SO ICY" },
+      { time: 5.10, text: "WONDER" },
+      { time: 5.20, text: "WHY SHE" },
+      { time: 5.70, text: "LIKE" },
+      { time: 5.95, text: "ME" },
+      { time: 6.30, text: "BITCH" },
+      { time: 6.60, text: "I'M" },
+      { time: 6.85, text: "DROWNING" },
+      { time: 8.10, text: "IN" }, 
+      { time: 8.40, text: "WATER" },
+      { time: 9.20, text: "I" },
+      { time: 9.50, text: "JUST" },
+      { time: 9.75, text: "BOUGHT" },
+      { time: 10.05, text: "A" },
+      { time: 10.35, text: "CUBAN" },
+      { time: 10.90, text: "DIPPED" },
+      { time: 11.50, text: "IT IN" },
+      { time: 11.95, text: "A" },
+      { time: 12.05, text: "FOUNTAIN" }
+    ],
+  }
+];

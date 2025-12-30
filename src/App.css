@@ -1,0 +1,9 @@
+/* App.css */
+@font-face {
+  font-family: 'subtitule';
+  /* Si el archivo está en la carpeta public/font/ usa la ruta absoluta /font/... */
+  src: url('/font/Sectar.otf') format('opentype'); 
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap; /* Ayuda a que cargue más rápido */
+}
